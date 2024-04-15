@@ -29,6 +29,11 @@ app.use(cors(
         credentials: true
   }
   ));
+
+app.get("/", (req, res) => {
+  res.json("Hello"):
+})
+
 app.use(express.json());
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
@@ -41,11 +46,6 @@ app.use("/api/newsletter", newsLetter);
 app.listen(process.env.PORT || 8080, () => {
   console.log("Backend server is running!");
 });
-
-app.get("/", (req, res) => {
-  res.json("Hello"):
-})
-
 
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
