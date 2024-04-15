@@ -1,0 +1,37 @@
+{
+  "name": "ecommerceapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "swagger-autogen": "node swagger.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.74",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^6.0.5",
+    "node-fetch": "^3.2.3",
+    "nodemailer": "^6.7.2",
+    "nodemon": "^3.0.2",
+    "stripe": "^8.174.0",
+    "swagger-autogen": "^2.20.5",
+    "swagger-ui": "^4.8.0",
+    "swagger-ui-express": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "@types/supertest": "^2.0.12",
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2",
+    "ts-jest": "^27.1.3"
+  }
+}
