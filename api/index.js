@@ -22,7 +22,13 @@ mongoose
     console.log(err);
   });
 
-app.use(cors());
+app.use(cors(
+    {
+    origin: ["fitop-api.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true
+   }
+));
 app.use(express.json());
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
