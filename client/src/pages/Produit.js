@@ -146,11 +146,11 @@ export default function Produit() {
   const [size, setSize] = useState("");
   const utilisateur = useSelector((state) => state.utilisateur.utilisateursCourant);
   const produits = useSelector(state => state.panier.produits);
-
+  const BASE_URL = "http://localhost:8080/api/";
   useEffect(() => {
     const getProduit = async () => {
       try {
-        const res = await axios.get(`http://localhost:8080/api/products/find/`+ id);
+        const res = await axios.get(BASE_URL  + `products/find/`+ id);
         setProduit(res.data);
       } catch {}
     };

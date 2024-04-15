@@ -10,7 +10,7 @@ display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
 `
-
+const BASE_URL = "http://localhost:8080/api/";
 export default function Products({ categorie, filtre, sort,search }) {
     const [produits, setProduits] = useState([]);
     const [produitsFiltrer, setproduitsFiltrer] = useState([]);
@@ -18,11 +18,11 @@ export default function Products({ categorie, filtre, sort,search }) {
 
     useEffect(() => {
       const getProduits = async () => {
-        let url = `http://localhost:8080/api/products`; 
+        let url = BASE_URL  + `products`; 
         if(categorie) 
-          {  url = `http://localhost:8080/api/products?category=${categorie}`;  }
+          {  url = BASE_URL  + `products?category=${categorie}`;  }
         else if (search)
-          {  url = `http://localhost:8080/api/products?search=${search}`; }
+          {  url = BASE_URL  + `products?search=${search}`; }
           
         try {
           const res = await axios.get(url);
