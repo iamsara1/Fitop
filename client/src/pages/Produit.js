@@ -146,7 +146,7 @@ export default function Produit() {
   const [size, setSize] = useState("");
   const utilisateur = useSelector((state) => state.utilisateur.utilisateursCourant);
   const produits = useSelector(state => state.panier.produits);
-  const BASE_URL = "https://fitop-api.vercel.app/";
+  const BASE_URL = "http://localhost:8080/api/";
   useEffect(() => {
     const getProduit = async () => {
       try {
