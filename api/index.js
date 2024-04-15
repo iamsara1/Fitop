@@ -24,7 +24,7 @@ mongoose
 
 app.use(cors(
     {
-    origin: ["https://fitop.vercel.app/"],
+    origin: ["https://fitop.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true
    }
