@@ -10,7 +10,7 @@ display: flex;
 flex-wrap: wrap;
 justify-content: space-between;
 `
-const BASE_URL = "https://fitop-api.vercel.app/";
+const BASE_URL = "http://localhost:8080/api/";
 export default function Products({ categorie, filtre, sort,search }) {
     const [produits, setProduits] = useState([]);
     const [produitsFiltrer, setproduitsFiltrer] = useState([]);
