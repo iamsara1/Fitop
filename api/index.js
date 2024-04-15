@@ -42,6 +42,11 @@ app.listen(process.env.PORT || 8080, () => {
   console.log("Backend server is running!");
 });
 
+app.get("/", (req, res) => {
+  res.json("Hello"):
+})
+
+
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
 module.exports = app;
