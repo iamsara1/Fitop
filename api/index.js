@@ -22,7 +22,11 @@ mongoose
     console.log(err);
   });
 
-app.use(cors());
+app.use(cors(cors: {
+        origin: "*",
+        methods: ["GET", "POST"],
+        credentials: true,
+    }));
 app.use(express.json());
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
